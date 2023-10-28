@@ -1,10 +1,11 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const InstallButton = () => {
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [gottenprops, setprops] = useState<any>()
   let deferredPrompt: any;
+ 
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
