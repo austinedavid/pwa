@@ -19,10 +19,20 @@ const Notify = () => {
             })
         }
     }
+
+    const handleNew = ()=>{
+        const newOne = new Notification("hello", {
+            body:"lets run it",
+            icon: "https://res.cloudinary.com/dgu1akbmr/image/upload/v1698173513/images/wg190h7xlvmn5ro32wmn.jpg"
+        })
+    }
   return (
     <div>
         <button onClick={handleNotification} className=' bg-red-600 text-white'>
             Notifify me
+        </button>
+        <button onClick={handleNew} className=' bg-green-600 text-white p-1'>
+            new notification
         </button>
     </div>
   )
