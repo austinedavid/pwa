@@ -22,15 +22,13 @@ const InstallButton = () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
   }, []);
-console.log(deferredPrompt)
-console.log(gottenprops)
   const handleInstallClick = () => {
     if (gottenprops) {
-        console.log(gottenprops)
       gottenprops.prompt();
       gottenprops.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt');
+          console.log(choiceResult)
         }
       });
     }
